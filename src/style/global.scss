@@ -1,0 +1,10 @@
+@use "./variables.scss" as color;
+
+a {
+  text-decoration: none;
+  color: color.$Black;
+}
+
+body {
+  background-color: color.$White;
+}
