@@ -1,0 +1,16 @@
+@use "../../style/variables.scss" as color;
+
+.navList {
+  display: flex;
+  gap: 10px;
+
+  li {
+    color: color.$Orange;
+  }
+
+  .active {
+    text-decoration: underline;
+    text-decoration-color: color.$Orange;
+    margin-bottom: 5px;
+  }
+}

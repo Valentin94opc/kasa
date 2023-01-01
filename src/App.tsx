@@ -1,5 +1,6 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Layout } from "./Components/Layout/Layout";
 import { About } from "./Pages/About";
 import { Home } from "./Pages/Home";
 import { Lodging } from "./Pages/Lodging";
@@ -11,14 +12,16 @@ import "./style/variables.scss";
 
 function App() {
   return (
-    <>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="*" element={<Notfound />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/lodging/:id" element={<Lodging />} />
-      </Routes>
-    </>
+    <Router>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="*" element={<Notfound />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/lodging/:id" element={<Lodging />} />
+        </Routes>
+      </Layout>
+    </Router>
   );
 }
 
