@@ -17,3 +17,12 @@
     line-height: 1.1rem;
   }
 }
+
+@media (max-width: 660px) {
+  .lodgingCardContainer {
+    h3 {
+      font-size: 1rem;
+      max-width: 200px;
+    }
+  }
+}

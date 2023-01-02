@@ -6,7 +6,7 @@ import "./style.scss";
 export const Header = () => {
   return (
     <header className="header">
-      <Logo color={"#ff6060"} width={"150"} height={"50"} />
+      <Logo color={"#ff6060"} width={"125"} height={"50"} />
       <Navigation />
     </header>
   );

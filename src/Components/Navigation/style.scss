@@ -14,3 +14,12 @@
     margin-bottom: 5px;
   }
 }
+
+@media (max-width: 380px) {
+  .navList {
+    gap: 15px;
+    li {
+      font-size: 0.8rem;
+    }
+  }
+}

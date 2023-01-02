@@ -7,3 +7,23 @@
   white-space: nowrap;
   font-weight: 500;
 }
+
+.lineBreak {
+  display: none;
+}
+
+@media (max-width: 660px) {
+  .homeBannerTitle {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .homeBannerTitle {
+    font-size: 1.2rem;
+  }
+
+  .lineBreak {
+    display: block;
+  }
+}

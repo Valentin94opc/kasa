@@ -29,7 +29,12 @@ export const AccordeonFeed = () => {
 
   const GeneratedAccordeons = accordeonsData.map((data) => {
     const { title, details } = data;
-    return <Accordeon title={title} DetailsComponent={<p>{details}</p>} />;
+    return (
+      <Accordeon
+        title={title}
+        DetailsComponent={<p className="accordeonDetail">{details}</p>}
+      />
+    );
   });
 
   return (
