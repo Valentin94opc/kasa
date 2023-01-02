@@ -1,0 +1,39 @@
+@use "../../style/variables.scss" as color;
+
+.accordeonSummary {
+  display: flex;
+  justify-content: space-between;
+  background-color: color.$Orange;
+  border-radius: 3px;
+  padding: 5px 15px;
+  align-items: center;
+  h3 {
+    color: color.$White;
+  }
+  button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+  }
+
+  .dropdownActive {
+    transform: rotate(180deg);
+  }
+}
+
+.accordeonDetails {
+  background-color: color.$Grey;
+  color: color.$Orange;
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.25s ease-in-out;
+}
+
+.accordeonActive {
+  max-height: 500px;
+}
+
+.detailsWrapper {
+  padding: 15px;
+}

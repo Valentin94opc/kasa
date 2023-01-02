@@ -1,15 +1,7 @@
 import React from "react";
+import { SvgProps } from "../../../types/SvgProps";
 
-interface SizeInString<T = string> {
-  width: T;
-  height: T;
-}
-
-interface LogoProps extends SizeInString {
-  color: string;
-}
-
-export const Logo = ({ color, width = "211", height = "68" }: LogoProps) => {
+export const Logo = ({ color, width = "211", height = "68" }: SvgProps) => {
   return (
     <div>
       <svg
