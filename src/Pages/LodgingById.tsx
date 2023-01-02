@@ -1,6 +1,10 @@
 import React from "react";
 import { Navigate, useLocation } from "react-router-dom";
 import { LodgingHost } from "../Components/Lodging/LodgingHost/LodgingHost";
+import {
+  LodgingRatings,
+  Rating,
+} from "../Components/Lodging/LodgingRatings/LodgingRatings";
 import { LodgingSectionIntro } from "../Components/Lodging/LodgingSectionIntro/LodgingSectionIntro";
 import { TagsList } from "../Components/Lodging/LodgingTag/TagsList";
 import { Lodging } from "../types/Lodging";
@@ -11,7 +15,7 @@ export const LodgingById = () => {
 
   if (!lodging) return <Navigate to="/" />;
 
-  const { title, tags, host } = lodging;
+  const { title, tags, host, rating } = lodging;
 
   const { name, picture } = host;
 
@@ -26,6 +30,7 @@ export const LodgingById = () => {
           <LodgingSectionIntro title={title} location={lodging?.location} />
           <TagsList tags={tags} />
           <LodgingHost name={name} picture={picture} />
+          <LodgingRatings rating={rating as Rating} />
         </section>
       </main>
     </>
