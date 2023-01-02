@@ -6,11 +6,13 @@ import { HomeBannerTitle } from "./HomeBannerTitle";
 export const HomeBanner = () => {
   return (
     <section>
-      <HeroBanner
-        imageLink={homeBannerImg}
-        altText="Paysage rocheux et embrumé"
-        TitleComponent={<HomeBannerTitle />}
-      />
+      <div className="homeBannerWrapper">
+        <HeroBanner
+          imageLink={homeBannerImg}
+          altText="Paysage rocheux et embrumé"
+          TitleComponent={<HomeBannerTitle />}
+        />
+      </div>
     </section>
   );
 };

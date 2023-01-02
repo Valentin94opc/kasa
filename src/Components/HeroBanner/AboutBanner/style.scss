@@ -1,0 +1,15 @@
+.aboutBannerWrapper {
+  img {
+    height: 150px;
+  }
+}
+
+@media (max-width: 380px) {
+  .aboutBannerWrapper {
+    img {
+      height: 180px;
+      object-fit: cover;
+      object-position: right;
+    }
+  }
+}

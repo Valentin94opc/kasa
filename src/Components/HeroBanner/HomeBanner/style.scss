@@ -8,13 +8,19 @@
   font-weight: 500;
 }
 
+.homeBannerWrapper {
+  img {
+    height: 150px;
+  }
+}
+
 .lineBreak {
   display: none;
 }
 
 @media (max-width: 660px) {
   .homeBannerTitle {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 }
 
@@ -25,5 +31,11 @@
 
   .lineBreak {
     display: block;
+  }
+
+  .homeBannerWrapper {
+    img {
+      height: 100px;
+    }
   }
 }

@@ -10,3 +10,9 @@
     line-height: 1.6rem;
   }
 }
+
+@media (max-width: 380px) {
+  .accordeonFeedContainer {
+    width: 100%;
+  }
+}
