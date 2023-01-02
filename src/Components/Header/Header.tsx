@@ -1,7 +1,7 @@
 import React from "react";
 import { Navigation } from "../Navigation/Navigation";
 import { Logo } from "../Shared/Logo/Logo";
-import "./header.scss";
+import "./style.scss";
 
 export const Header = () => {
   return (

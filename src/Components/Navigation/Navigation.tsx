@@ -2,7 +2,7 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import { NavItems } from "./NavItems";
 
-import "./navigation.scss";
+import "./style.scss";
 
 export const Navigation = () => {
   const location = useLocation();

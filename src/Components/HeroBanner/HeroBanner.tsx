@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 
-import "./herobanner.scss";
+import "./style.scss";
 
 interface HeroBannerProps {
   imageLink: string;
