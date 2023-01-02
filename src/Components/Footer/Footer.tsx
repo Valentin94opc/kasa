@@ -5,7 +5,7 @@ import "./footer.scss";
 
 export const Footer = () => {
   return (
-    <footer>
+    <footer className="footerContainer">
       <Logo color={"#e5e5e5"} width={"75"} height={"25"} />
       <p>© 2020 Kasa. All rights reserved</p>
     </footer>
