@@ -1,0 +1,10 @@
+@use "../../../style/variables.scss" as color;
+
+.lodgingFeedContainer {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 50px;
+  padding: 30px;
+  background-color: color.$Grey;
+  border-radius: 5px;
+}

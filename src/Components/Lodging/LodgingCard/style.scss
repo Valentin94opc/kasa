@@ -1,0 +1,19 @@
+@use "../../../style/variables.scss" as color;
+
+.lodgingCardContainer {
+  position: relative;
+  aspect-ratio: 1/1;
+  grid-column: span 1 / span 1;
+  background: linear-gradient(180deg, color.$Orange 0%, #737171 100%);
+  border-radius: 7px;
+
+  h3 {
+    position: absolute;
+    bottom: 0;
+    color: color.$White;
+    font-size: 0.7rem;
+    padding: 15px;
+    max-width: 150px;
+    line-height: 1.1rem;
+  }
+}
