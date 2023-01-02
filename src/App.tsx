@@ -4,7 +4,7 @@ import { Layout } from "./Components/Layout/Layout";
 import { About } from "./Pages/About";
 import { Home } from "./Pages/Home";
 import { Lodging } from "./Pages/Lodging";
-import { Notfound } from "./Pages/NotFound";
+import { Notfound } from "./Pages/NotFound/NotFound";
 
 import "./style/global.scss";
 import "./style/reset.scss";

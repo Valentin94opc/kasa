@@ -1,0 +1,31 @@
+@use "../../style/variables.scss" as color;
+
+.notFoundContainer,
+.notFoundTitleWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin: 50px;
+  h1,
+  p {
+    color: color.$Orange;
+  }
+
+  h1 {
+    font-size: 12rem;
+    font-weight: 700;
+  }
+
+  .returnHome {
+    font-size: 0.8rem;
+    text-decoration: underline;
+  }
+}
+
+.notFoundTitleWrapper {
+  p {
+    font-size: 1.6rem;
+  }
+}
