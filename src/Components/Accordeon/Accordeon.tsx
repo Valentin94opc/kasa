@@ -5,16 +5,18 @@ import "./style.scss";
 
 export interface AccordeonProps {
   title: string;
-  details: string;
+  initialToggleState?: boolean;
   DetailsComponent: ReactNode;
+  customMinHeight?: string;
 }
 
 export const Accordeon = ({
   title,
-  details,
+  initialToggleState = false,
   DetailsComponent,
+  customMinHeight = "",
 }: AccordeonProps) => {
-  const [isToggled, setIsToggled] = useState(false);
+  const [isToggled, setIsToggled] = useState(initialToggleState);
 
   const isAccordeonDetailsVisible = isToggled
     ? "accordeonDetails accordeonActive"
@@ -25,6 +27,8 @@ export const Accordeon = ({
   const handleAccordeonVisibility = () => {
     setIsToggled((state) => !state);
   };
+
+  const minHeight = { minHeight: isToggled ? customMinHeight : "" };
 
   return (
     <div>
@@ -37,7 +41,7 @@ export const Accordeon = ({
           <DropdownIcon width="20" height="20" />
         </button>
       </summary>
-      <div className={isAccordeonDetailsVisible}>
+      <div className={isAccordeonDetailsVisible} style={minHeight}>
         <div className="detailsWrapper">{DetailsComponent}</div>
       </div>
     </div>

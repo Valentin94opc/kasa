@@ -1,5 +1,7 @@
 import React from "react";
 
+import "./style.scss";
+
 export const LodgingSectionIntro = ({
   title,
   location,
@@ -8,7 +10,7 @@ export const LodgingSectionIntro = ({
   location: string;
 }) => {
   return (
-    <div>
+    <div className="lodgingSectionIntroContainer">
       <h1>{title}</h1>
       <p>{location}</p>
     </div>

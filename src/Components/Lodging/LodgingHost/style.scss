@@ -3,15 +3,16 @@
 .lodgingHostContainer {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 7px;
   color: color.$Orange;
 
   img {
     border-radius: 9999px;
-    width: 75px;
+    width: 50px;
   }
 }
 
 .hostName {
   max-width: min-content;
+  text-align: right;
 }

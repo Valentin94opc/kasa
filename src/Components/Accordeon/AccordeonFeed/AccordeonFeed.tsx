@@ -4,7 +4,7 @@ import { Accordeon } from "../Accordeon";
 import "./style.scss";
 
 export const AccordeonFeed = () => {
-  const accordeons = [
+  const accordeonsData = [
     {
       title: "Fiabilité",
       details:
@@ -27,15 +27,9 @@ export const AccordeonFeed = () => {
     },
   ];
 
-  const GeneratedAccordeons = accordeons.map((accordeon) => {
-    const { title, details } = accordeon;
-    return (
-      <Accordeon
-        title={title}
-        details={details}
-        DetailsComponent={<p>{details}</p>}
-      />
-    );
+  const GeneratedAccordeons = accordeonsData.map((data) => {
+    const { title, details } = data;
+    return <Accordeon title={title} DetailsComponent={<p>{details}</p>} />;
   });
 
   return (

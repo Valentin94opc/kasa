@@ -11,7 +11,7 @@ export const LodgingRatings = ({ rating }: { rating: Rating }) => {
   const starsFactory = (color: string, key: string) => {
     return (
       <li key={key}>
-        <Star width="20" height="20" color={color} />
+        <Star width="23" height="23" color={color} />
       </li>
     );
   };
@@ -34,7 +34,7 @@ export const LodgingRatings = ({ rating }: { rating: Rating }) => {
 
     const negativeRatingsArray = convertNumberToArray(emptyStars).map(
       (index) => {
-        return starsFactory("#f6f6f6", `negative rating ${index}`);
+        return starsFactory("#E3E3E3", `negative rating ${index}`);
       }
     );
 

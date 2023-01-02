@@ -1,0 +1,44 @@
+.accordeonsWrapper {
+  display: flex;
+  gap: 70px;
+
+  .accordeonWrapper {
+    width: 50%;
+  }
+}
+
+.generatedDescription,
+.generatedEquipments {
+  margin-top: 10px;
+}
+
+.generatedDescription {
+  line-height: 1.4rem;
+}
+
+.generatedEquipments {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.entitiesContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 25px;
+}
+
+.entitiesWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.entitiesWrapper:nth-child(1) {
+  gap: 20px;
+}
+
+.entitiesWrapper:nth-child(2) {
+  gap: 10px;
+  align-items: flex-end;
+}

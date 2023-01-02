@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Layout } from "./Components/Layout/Layout";
 import { About } from "./Pages/About";
 import { Home } from "./Pages/Home";
-import { LodgingById } from "./Pages/LodgingById";
+import { LodgingById } from "./Pages/LodgingById/LodgingById";
 import { Notfound } from "./Pages/NotFound/NotFound";
 
 import "./style/global.scss";
