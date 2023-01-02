@@ -1,0 +1,14 @@
+@use "../../../style/variables.scss" as color;
+
+.tagContainer {
+  padding: 5px;
+  border-radius: 5px;
+  min-width: 150px;
+  text-align: center;
+  background-color: color.$Orange;
+  color: color.$White;
+}
+.tagsList {
+  display: flex;
+  gap: 15px;
+}

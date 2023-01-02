@@ -1,0 +1,17 @@
+@use "../../../style/variables.scss" as color;
+
+.lodgingHostContainer {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: color.$Orange;
+
+  img {
+    border-radius: 9999px;
+    width: 75px;
+  }
+}
+
+.hostName {
+  max-width: min-content;
+}

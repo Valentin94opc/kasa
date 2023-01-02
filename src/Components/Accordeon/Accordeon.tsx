@@ -34,7 +34,7 @@ export const Accordeon = ({
           className={isDropDownActive}
           onClick={handleAccordeonVisibility}
         >
-          <DropdownIcon width={"20"} height={"20"} />
+          <DropdownIcon width="20" height="20" />
         </button>
       </summary>
       <div className={isAccordeonDetailsVisible}>
