@@ -1,6 +1,7 @@
 import React from "react";
 import { Navigate, useLocation } from "react-router-dom";
 import { Accordeon } from "../../Components/Accordeon/Accordeon";
+import { LodgingGallery } from "../../Components/Lodging/LodgingGallery/LodgingGallery";
 import { LodgingHost } from "../../Components/Lodging/LodgingHost/LodgingHost";
 import {
   LodgingRatings,
@@ -18,7 +19,8 @@ export const LodgingById = () => {
 
   if (!lodging) return <Navigate to="/" />;
 
-  const { title, tags, host, rating, description, equipments } = lodging;
+  const { title, tags, host, rating, description, equipments, pictures } =
+    lodging;
 
   const { name, picture } = host;
 
@@ -37,7 +39,7 @@ export const LodgingById = () => {
   return (
     <>
       <section>
-        <div>Gallery Here</div>
+        <LodgingGallery images={pictures} />
       </section>
 
       <main>
