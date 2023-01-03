@@ -38,7 +38,7 @@ export const LodgingById = () => {
 
   return (
     <>
-      <section>
+      <section className="gallerySection">
         <LodgingGallery images={pictures} />
       </section>
 

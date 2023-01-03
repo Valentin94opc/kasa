@@ -1,9 +1,10 @@
 import React, { useRef, useState } from "react";
+import { NextIcon } from "./NextIcon";
+import { PrevIcon } from "./PrevIcon";
 
 import "./style.scss";
 
 export const LodgingGallery = ({ images }: { images: string[] }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
   const totalImages = images.length;
 
   const ref = useRef<null | HTMLInputElement>(null);
@@ -14,7 +15,10 @@ export const LodgingGallery = ({ images }: { images: string[] }) => {
       const itemWidth = parseInt(
         getComputedStyle(ref.current!.children[0]).width
       );
-      ref.current!.scrollLeft = scrollLeft + itemWidth;
+
+      if (ref.current!.scrollLeft === itemWidth * (totalImages - 1))
+        return (ref.current!.scrollLeft = 0);
+      return (ref.current!.scrollLeft = scrollLeft + itemWidth);
     });
   };
 
@@ -24,7 +28,9 @@ export const LodgingGallery = ({ images }: { images: string[] }) => {
       const itemWidth = parseInt(
         getComputedStyle(ref.current!.children[0]).width
       );
-      ref.current!.scrollLeft = scrollLeft - itemWidth;
+      if (ref.current!.scrollLeft === 0)
+        return (ref.current!.scrollLeft = scrollLeft + itemWidth * totalImages);
+      return (ref.current!.scrollLeft = scrollLeft - itemWidth);
     });
   };
 
@@ -38,10 +44,10 @@ export const LodgingGallery = ({ images }: { images: string[] }) => {
       {totalImages === 0 ? null : (
         <>
           <button className="prevButton" onClick={handlePrev}>
-            Prev
+            <PrevIcon width="32" height="32" color="white" />
           </button>
           <button className="nextButton" onClick={handleNext}>
-            Next
+            <NextIcon width="32" height="32" color="white" />
           </button>
         </>
       )}
