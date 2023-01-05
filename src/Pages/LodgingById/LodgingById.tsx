@@ -49,6 +49,7 @@ export const LodgingById = () => {
               <LodgingSectionIntro title={title} location={lodging?.location} />
               <TagsList tags={tags} />
             </div>
+
             <div className="entitiesWrapper">
               <LodgingHost name={name} picture={picture} />
               <LodgingRatings rating={rating as Rating} />

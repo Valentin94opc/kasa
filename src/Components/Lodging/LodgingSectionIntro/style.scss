@@ -12,3 +12,12 @@
     font-size: 0.9rem;
   }
 }
+
+@media (max-width: 660px) {
+  .lodgingSectionIntroContainer {
+    color: color.$Orange;
+    h1 {
+      margin-bottom: 20px;
+    }
+  }
+}

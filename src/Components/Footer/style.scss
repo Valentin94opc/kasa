@@ -1,5 +1,13 @@
 @use "../../style/variables.scss" as color;
 
+footer {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
 .footerContainer {
   display: flex;
   gap: 35px;
@@ -8,7 +16,8 @@
   justify-content: center;
   background: color.$Black;
   height: 150px;
-
+  width: 100%;
+  margin-top: 20px;
   p {
     color: color.$White;
   }
