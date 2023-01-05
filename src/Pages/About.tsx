@@ -6,7 +6,9 @@ export const About = () => {
   return (
     <>
       <AboutBanner />
-      <AccordeonFeed />
+      <main>
+        <AccordeonFeed />
+      </main>
     </>
   );
 };
