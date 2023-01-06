@@ -28,6 +28,7 @@
       padding: 15px;
       max-width: 150px;
       line-height: 1.1rem;
+      text-shadow: 1px 0.5px 1px black;
     }
   }
 }
@@ -38,9 +39,11 @@
 
 @media (max-width: 660px) {
   .lodgingCardContainer {
-    h3 {
-      font-size: 1rem;
-      max-width: 200px;
+    .contentWrapper {
+      h3 {
+        font-size: 1rem;
+        max-width: 200px;
+      }
     }
   }
 }

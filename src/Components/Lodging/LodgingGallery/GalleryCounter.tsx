@@ -9,5 +9,5 @@ export const GalleryCounter = ({
   currentImage,
   totalImages,
 }: GalleryCounterProps) => {
-  return <p>{`${currentImage} sur ${totalImages}`}</p>;
+  return <p>{`${currentImage}/${totalImages}`}</p>;
 };

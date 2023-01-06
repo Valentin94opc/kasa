@@ -29,13 +29,14 @@
 .entitiesContainer {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: flex-start;
   margin-bottom: 25px;
 }
 
 .entitiesWrapper {
   display: flex;
   flex-direction: column;
+  margin-bottom: 10px;
 }
 
 .entitiesWrapper:nth-child(1) {
