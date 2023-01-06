@@ -1,9 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { SvgProps } from "../../../types/SvgProps";
 
 export const Logo = ({ color, width = "211", height = "68" }: SvgProps) => {
   return (
-    <div>
+    <Link to="/">
       <svg
         width={width}
         height={height}
@@ -32,6 +33,6 @@ export const Logo = ({ color, width = "211", height = "68" }: SvgProps) => {
           fill={color}
         />
       </svg>
-    </div>
+    </Link>
   );
 };

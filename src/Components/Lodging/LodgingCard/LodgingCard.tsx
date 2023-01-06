@@ -10,7 +10,13 @@ export const LodgingCard = ({ lodging }: { lodging: Lodging }) => {
     <li>
       <Link to={`/lodging/${id}`} state={{ lodging }}>
         <article className="lodgingCardContainer">
-          <h3>{title}</h3>
+          <div className="contentWrapper">
+            <img
+              src={lodging.pictures[0]}
+              alt={`Location de ${lodging.host.name}`}
+            />
+            <h3>{title}</h3>
+          </div>
         </article>
       </Link>
     </li>

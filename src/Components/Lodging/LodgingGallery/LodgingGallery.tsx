@@ -53,7 +53,7 @@ export const LodgingGallery = ({ images }: { images: string[] }) => {
           );
         })}
       </div>
-      {totalImages === 0 ? null : (
+      {totalImages < 1 ? null : (
         <>
           <button className="prevButton" onClick={handlePrev}>
             <PrevIcon {...commonButtonProps} />
