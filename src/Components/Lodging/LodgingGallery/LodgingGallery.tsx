@@ -1,4 +1,7 @@
-import React, { useRef } from "react";
+import React from "react";
+import { useGalleryUtils } from "../../../hooks/useGalleryUtils";
+
+import { GalleryCounter } from "./GalleryCounter";
 import { NextIcon } from "./NextIcon";
 import { PrevIcon } from "./PrevIcon";
 
@@ -6,33 +9,14 @@ import "./style.scss";
 
 export const LodgingGallery = ({ images }: { images: string[] }) => {
   const totalImages = images?.length;
-
-  const ref = useRef<null | HTMLInputElement>(null);
-
-  const handleNext = () => {
-    requestAnimationFrame(() => {
-      const scrollLeft = ref.current!.scrollLeft;
-      const itemWidth = parseInt(
-        getComputedStyle(ref.current!.children[0]).width
-      );
-
-      if (ref.current!.scrollLeft === itemWidth * (totalImages - 1))
-        return (ref.current!.scrollLeft = 0);
-      return (ref.current!.scrollLeft = scrollLeft + itemWidth);
-    });
-  };
-
-  const handlePrev = () => {
-    requestAnimationFrame(() => {
-      const scrollLeft = ref.current!.scrollLeft;
-      const itemWidth = parseInt(
-        getComputedStyle(ref.current!.children[0]).width
-      );
-      if (ref.current!.scrollLeft === 0)
-        return (ref.current!.scrollLeft = scrollLeft + itemWidth * totalImages);
-      return (ref.current!.scrollLeft = scrollLeft - itemWidth);
-    });
-  };
+  const {
+    imageCurrentIndex,
+    currentImage,
+    scrollNext,
+    scrollPrev,
+    isSlideLeftClassName,
+    isSlideRightClassName,
+  } = useGalleryUtils({ totalImages });
 
   const commonButtonProps = {
     width: "32",
@@ -42,23 +26,24 @@ export const LodgingGallery = ({ images }: { images: string[] }) => {
 
   const GalleryImages = (
     <div className="galleryWrapper">
-      <div className="galleryContainer" ref={ref}>
-        {images.map((image, index) => {
-          return (
-            <img
-              key={index}
-              src={image}
-              alt="The alternative text must come from the response of the api when the images are sent by it"
-            />
-          );
-        })}
+      <div className="galleryContainer">
+        <img
+          key={imageCurrentIndex}
+          src={images[imageCurrentIndex]}
+          className={`${isSlideLeftClassName} ${isSlideRightClassName}`}
+          alt="test"
+        />
       </div>
-      {totalImages < 1 ? null : (
+      {totalImages <= 1 ? null : (
         <>
-          <button className="prevButton" onClick={handlePrev}>
+          <GalleryCounter
+            currentImage={currentImage}
+            totalImages={totalImages}
+          />
+          <button className="prevButton" onClick={scrollPrev}>
             <PrevIcon {...commonButtonProps} />
           </button>
-          <button className="nextButton" onClick={handleNext}>
+          <button className="nextButton" onClick={scrollNext}>
             <NextIcon {...commonButtonProps} />
           </button>
         </>
